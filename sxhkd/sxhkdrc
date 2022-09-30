@@ -1,31 +1,34 @@
 # make sxhkd reload its configuration files
 alt + Escape
 	pkill -USR1 -x sxhkd
- 
+
 # quit or restart bspwm
 super + shift + {e,r}
 	bspc {quit,wm -r}
- 
-# create a new terminal window or swap the current one to the biggest one in the screen 
+
+# create a new terminal window
 super + Return
 	gnome-terminal
 
+# open up the rofi launcher
 super + d
-	rofi -modi "window,run,ssh,drun" -show drun
- 
-# close or kill a window
+	rofi -modi "window,run,ssh,drun" -show drun rofi -theme ~/.config/rofi/launchers/type-3/style-1.rasi
+
+# close a window
 super + shift + q
 	bspc node -c
- 
+
 # change the window state
 alt + {t,ctrl + t,l,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
- 
-# expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
- 
+
 # focus or send a window to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# focus or rearrange windows on a given desktop
+super + {_,shift + }{j,l,k,semicolon} 
+	bspc node --{focus,swap} {west,south,north,east}
+
+# TODO: change focused window
 
