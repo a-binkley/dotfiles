@@ -1,7 +1,6 @@
 /**
  *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
+ * Author : Adrian Binkley
  * 
  * Rofi Theme File
  * Rofi Version: 1.7.3
@@ -28,7 +27,7 @@ window {
     location:                    northeast;
     anchor:                      northeast;
     fullscreen:                  false;
-    width:                       104px;
+    width:                       200px;
     x-offset:                    -8px;
     y-offset:                    56px;
 
@@ -123,8 +122,8 @@ error-message {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     1;
-    lines:                       5;
+    columns:                     2;
+    lines:                       1;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
