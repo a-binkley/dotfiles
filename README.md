@@ -3,4 +3,4 @@ A collection of configuration files for my Ubuntu/Fedora environments. Feel free
 
 ## Screenshots
 ### Desktop & Terminal
-TODO
+![](https://github.com/a-binkley/dotfiles/blob/i3/screenshots/i3_home.png?raw=true)
